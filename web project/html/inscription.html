@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../styles/inscription.css">
+</head>
+<body nUnLoad="store()">
+
+<a href="../index.html">
+<img src="../image/image.jpg" id="logo">
+</a>
+
+<nav id="menu">
+ <ul>
+ <li> <a href="../index.html"> Home </a></li> 
+ <li> <a href="articles.html">Articles </a></li> 
+ <li> <a href="panier.html">Panier </a></li> 
+ <li> <a href="contact.html">Contact </a></li> 
+
+</ul>
+</nav> 
+<section id ="content">
+ 
+  <div class="container">
+    <h1>Register</h1>
+    <p>Veuillez entrer information.</p>
+    <hr>
+	 
+	<label for="nom"><b>NOM</b></label>
+    <input type="text" placeholder="Enter NOM" name="nom" id="nom" required>
+	
+     <label for="prenom"><b>PRENOM</b></label>
+    <input type="text" placeholder="Enter PRENOM" name="prenom" id="prenom" required>
+	
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+	
+	<label for="tel"><b>TEL</b></label>
+    <input type="text" placeholder="Enter Tel" name="tel" id="tel" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <form action="compte.html">
+    <button type="submit" class="registerbtn" id="mybtn" onclick="store()">Register</button></form>
+  </div>
+  
+  <div class="footer">
+	
+	Designed by  elkarmoudi zakaria 2APG3 maarif
+</div>
+
+</section>
+
+
+<script type="text/javascript">
+function store() {
+var nom = document.getElementById('nom');
+var prenom = document.getElementById('prenom');
+var email= document.getElementById('email');
+var tel= document.getElementById('tel');
+    localStorage.setItem('nom', nom.value);
+    localStorage.setItem('prenom', prenom.value);
+    localStorage.setItem('email', email.value);
+    localStorage.setItem('tel', tel.value);
+
+    
+}
+
+ </script>
+
+</body>
+</html>
+
+
+
+
+
+

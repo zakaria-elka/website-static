@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"/>
+<title> Votre compte </title>
+
+
+<link rel="stylesheet" type="text/css" href="../styles/compte.css">
+
+</head>
+<body onload="check()">
+
+<a href="../index.html">
+<img src="../image/image.jpg" id="logo">
+</a>
+
+
+<nav id="menu">
+ <ul>
+ <li> <a href="../index.html"> Home </a></li> 
+ <li> <a href="articles.html">Articles </a></li> 
+ <li> <a href="contact.html">Contact </a></li> 
+ <li> <a href="inscription.html">Inscription </a></li> 
+</ul>
+</nav> 
+
+<section id ="content">
+
+</section>
+
+ <div class="footer">
+	
+	Designed by  elkarmoudi zakaria 2APG3 maarif
+</div>
+
+
+<script type="text/javascript">
+ function check() {
+var conetent = document.getElementById("content");
+ var nom = document.createElement("p");
+ var prenom = document.createElement("p");
+var email = document.createElement("p");
+var tel = document.createElement("p");
+
+nom.className = "info";
+prenom.className = "info";
+ email.className = "info";
+ tel.className = "info";
+ nom.textContent = "Nom : " + localStorage.getItem("nom");
+ prenom.textContent = "Prenom : " +
+localStorage.getItem("prenom");
+ email.textContent = "Email : " +
+localStorage.getItem("email");
+ tel.textContent = "Telephone : " +
+localStorage.getItem("tel");
+ conetent.appendChild(nom);
+ conetent.appendChild(prenom);
+conetent.appendChild(email);
+conetent.appendChild(tel);
+
+
+
+    
+}
+ </script>
+</body>
+</html>
+
+
+
